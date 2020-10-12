@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "DoAn5": {
+    "DoAn5-Tien": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/DoAn5",
+            "outputPath": "dist/DoAn5-Tien",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "DoAn5:build"
+            "browserTarget": "DoAn5-Tien:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "DoAn5:build:production"
+              "browserTarget": "DoAn5-Tien:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "DoAn5:build"
+            "browserTarget": "DoAn5-Tien:build"
           }
         },
         "test": {
@@ -110,15 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "DoAn5:serve"
+            "devServerTarget": "DoAn5-Tien:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "DoAn5:serve:production"
+              "devServerTarget": "DoAn5-Tien:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "DoAn5"
+    }
+  },
+  "defaultProject": "DoAn5-Tien",
+  "cli": {
+    "analytics": "c8a4bb2c-f58c-4503-b922-cf5621f57e79"
+  }
 }
