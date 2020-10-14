@@ -14,6 +14,12 @@ import { LogoutComponent } from './logout/logout.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { GioithieuComponent } from './gioithieu/gioithieu.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  
+];
 
 @NgModule({
   declarations: [
@@ -32,7 +38,10 @@ import { GioithieuComponent } from './gioithieu/gioithieu.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+    NgModule
   ],
   providers: [],
   bootstrap: [AppComponent]
