@@ -1,433 +1,457 @@
-<!-- header start -->
+<!--//================Preloder start==============//-->
+<div class="preloder-section">
+    <div class="loaderArea">
+        <div class="loader">
+            <h1>VT SHOP</h1>
+            <div class="loaderSquare"></div>
+            <h2>Chào Mừng Quý Khách Hàng !</h2>
+        </div>
+    </div>
+</div>
+<!--//================Preloder end==============//-->
+<!--//================Header section start==============//-->
 <header>
-    <div class="header-top-area">
+    <div class="main-hrader">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <div class="top-info">
-                        <p>Call us free 24/7 : (+86) 6 888 888</p>
+                <div class="top-bar padTB20">
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="top-bar-register padTB10">
+                            <h6><a routerLink="/login">Đăng Nhập</a><span></span><a routerLink="/register"> Đăng Ký</a></h6>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="top-nav">
-                        <div class="currency dropdown">
-                            <ul>
-                                <li><a href="#">USD</a>
-                                    <ul>
-                                        <li><a href="#">USD</a></li>
-                                        <li><a href="#">EUR</a></li>
-                                        <li><a href="#">GBP</a></li>
-                                        <li><a href="#">JPY</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="language dropdown">
-                            <ul>
-                                <li><a href="#">ENGLISH</a>
-                                    <ul>
-                                        <li><a href="#">ENGLISH</a></li>
-                                        <li><a href="#">FRANCE</a></li>
-                                        <li><a href="#">GERMANY</a></li>
-                                        <li><a href="#">JAPANESE</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="account">
-                            <a class="login" routerLink="/login">Đăng Nhập</a>
-                            <span>Or</span>
-                            <a class="register" routerLink="/login">Đăng Ký</a>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <figure class="logo">
+                            <a href="index-2.html"><img style="width: 125px; height: 125px; border-radius: 100px;" src="assets/images/logovip3.png" alt=""></a>
+                        </figure>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="usd">
+                            <select name="usd">
+                                <option value="USD">USD</option>
+                                <option value="INR">INR</option>
+                                <option value="CAD">CAD</option>
+                                <option value="USD">USD</option>
+                                <option value="AUD">AUD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="JPY">JPY</option>
+                            </select>
+                            <select name="language">
+                                <option value="eng">English</option>
+                                <option value="french">French</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- header-bottom-area start -->
-    <div id="sticker" class="header-bottom-area">
-        <div class="container">
-            <div class="inner-container">
-                <div class="row">
-                    <div class="col-md-2 col-sm-4 col-xs-6">
-                        <div class="logo">
-                            <a routerLink="/home"><img style="width: 125px; height: 125px; border-radius: 100px;" src="assets/img/logovip.png" alt="" /></a>
-                        </div>
-                    </div>
-                    <div class="col-md-8 hidden-xs hidden-sm">
-                        <div class="main-menu">
-                            <nav>
-                                <ul>
-                                    <li><a routerLink="/home">home</a>
-                                        <ul>
-                                            <li><a href="assets/index.html">home version 1</a></li>
-                                            <li><a href="assets/index-2.html">home version 2</a></li>
-                                            <li><a href="assets/index-3.html">home version 3</a></li>
-                                            <li><a href="assets/index-4.html">home version box</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a routerLink="/blog">blog</a>
-                                        <ul>
-                                            <li><a href="assets/blog.html">blog left sidebar</a></li>
-                                            <li><a href="assets/blog-right-sidebar.html">blog right sidebar</a></li>
-                                            <li><a href="assets/blog-2-column.html">blog 2 column</a></li>
-                                            <li><a href="assets/blog-3-column.html">blog 3 column</a></li>
-                                            <li><a href="assets/single-blog.html">single blog</a></li>
-                                            <li><a href="assets/single-blog-video.html">single blog video</a></li>
-                                        </ul>											
-                                    </li>
-                                    <li><a routerLink="/list/:id">shop</a>
-                                        <div class="mega-menu mega-menu-2">											
-                                            <span>
-                                                <a href="assets/shop.html" class="mega-title">WOMEN CLOTH </a>
-                                                <a href="assets/shop.html">casual shirt</a>
-                                                <a href="assets/shop.html">rikke t-shirt</a>
-                                                <a href="assets/shop.html">mia top </a>
-                                                <a href="assets/shop.html">muscle tee </a>
-                                            </span>
-                                            <span>
-                                                <a href="assets/shop.html" class="mega-title">MEN CLOTH </a>
-                                                <a href="assets/shop.html">casual shirt</a>
-                                                <a href="assets/shop.html">rikke t-shirt</a>
-                                                <a href="assets/shop.html">mia top </a>
-                                                <a href="assets/shop.html">muscle tee </a>
-                                            </span>
-                                            <span class="no-padd-r">
-                                                <a href="assets/shop.html" class="mega-title">WOMEN JEWELRY </a>
-                                                <a href="assets/shop.html">necklace </a>
-                                                <a href="assets/shop.html">chunky short striped </a>
-                                                <a href="assets/shop.html">samhar cuff</a>
-                                                <a href="assets/shop.html">nail set </a>
-                                            </span>
-                                            <span class="mega-menu-img">
-                                                <a href="assets/shop.html"><img alt="" src="assets/img/customblock-1.jpg"></a>
-                                            </span>
-                                        </div>											
-                                    </li>											
-                                    <li><a routerLink="/contact">contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-8 col-xs-6 header-right">
-                        <div class="my-cart">
-                            <div class="total-cart">
-                                <a href="assets/cart.html">
-                                    <img src="assets/img/cart/cart.png" alt="" />
-                                    <span>3</span>
-                                </a>								
-                            </div>
-                            <ul>
-                                <li>
-                                    <div class="cart-img">
-                                        <a href="#"><img alt="" src="assets/img/cart/1.jpg"></a>
+    <div class="header_menu">
+        <div id="main-menu" class="wa-main-menu">
+            <!-- Menu -->
+            <div class="wathemes-menu relative">
+                <!-- navbar -->
+                <div class="navbar navbar-default theme-bg mar0" role="navigation">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 col-sm-10 col-xs-12">
+                                <div class="row">
+                                    <div class="navbar-header">
+                                        <!-- Button For Responsive toggle -->
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span> 
+                                        <span class="icon-bar"></span> 
+                                        <span class="icon-bar"></span> 
+                                        <span class="icon-bar"></span>
+                                        </button> 
                                     </div>
-                                    <div class="cart-info">
-                                        <h4><a href="#">Vestibulum suscipit</a></h4>
-                                        <span>£165.00 <span>x 1</span></span>
+                                    <!-- Navbar Collapse -->
+                                    <div class="navbar-collapse collapse">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <!-- nav -->
+                                            <ul class="nav navbar-nav">
+                                                <li>
+                                                    <a routerLink="/" class="header-menu-one">Trang Chủ<i aria-hidden="true"></i></a>
+                                                </li>
+                                                <li class="mega-menu">
+                                                    <a routerLink="/list/:id" class="header-menu-one" data-toggle="dropdown">Danh mục<i class="fa fa-caret-down marL5" aria-hidden="true"></i></a>
+                                                    <ul class="dropdown-menu sm-nowrap">
+                                                        <li>
+                                                            <div class="row">
+                                                                <div class="col-md-7 col-sm-7 col-xs-12">
+                                                                    <div class="col-sm-4 col-xs-12">
+                                                                        <div class="title">
+                                                                            <h4>Áo Thun</h4>
+                                                                            <div class="page-links">
+                                                                                <div>
+                                                                                    <a href="#"> Jackets</a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="#"> Sweaters</a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="#">Tees</a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="#"> Bras & Tanks</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-4 col-xs-12">
+                                                                        <div class="title">
+                                                                            <h4>Áo Sơ Mi</h4>
+                                                                            <div class="page-links">
+                                                                                <div>
+                                                                                    <a href="#"> Jackets</a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="#"> Sweaters</a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="#">Tees</a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="#"> Bras & Tanks</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-4 col-xs-12">
+                                                                        <div class="title">
+                                                                            <h4>Quần Dài</h4>
+                                                                            <div class="page-links">
+                                                                                <div>
+                                                                                    <a href="#"> Jackets</a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="#"> Sweaters</a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="#">Tees</a>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="#"> Bras & Tanks</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                        <figure class="menu-image zoom-effect">
+                                                                            <img src="assets/images/all-image/menu-image-one.jpg" alt="">
+                                                                            <figcaption>
+                                                                                <div class="menu-image-text">
+                                                                                    <h3>shop the bags</h3>
+                                                                                    <a href="#" class="template-button">shop now</a>
+                                                                                </div>
+                                                                            </figcaption>
+                                                                        </figure>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a routerLink="/blog" class="header-menu-one">blog<i aria-hidden="true"></i></a> 
+                                                </li>
+                                                <li>
+                                                    <a routerLink="/gioithieu" class="header-menu-one">Giới thiệu<i aria-hidden="true"></i></a> 
+                                                </li>
+                                                <li><a routerLink="/contact" class="header-menu-one">contact</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="del-icon">
-                                        <i class="fa fa-times-circle"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="cart-img">
-                                        <a href="#"><img alt="" src="assets/img/cart/1.jpg"></a>
-                                    </div>
-                                    <div class="cart-info">
-                                        <h4><a href="#">Vestibulum suscipit</a></h4>
-                                        <span>£165.00 <span>x 1</span></span>
-                                    </div>
-                                    <div class="del-icon">
-                                        <i class="fa fa-times-circle"></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="cart-img">
-                                        <a href="#"><img alt="" src="assets/img/cart/1.jpg"></a>
-                                    </div>
-                                    <div class="cart-info">
-                                        <h4><a href="#">Vestibulum suscipit</a></h4>
-                                        <span>£165.00 <span>x 1</span></span>
-                                    </div>
-                                    <div class="del-icon">
-                                        <i class="fa fa-times-circle"></i>
-                                    </div>
-                                </li>
-                                <li class="cart-border">
-                                    <div class="subtotal-text">Subtotal: </div>
-                                    <div class="subtotal-price">£300.00</div>
-                                </li>
-                                <li>
-                                    <a class="cart-button" href="assets/checkout.html">view cart</a>
-                                    <a class="checkout" href="assets/checkout.html">checkout</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="header-search">				
-                              <!-- SEARCH BAR -->
-                              <div class="dropdown">
-                                <a href="assets/javascript:void(0);" class="search-open">
-                                    <img src="assets/img/search.png" alt="" />
-                                </a>
-                                <div class="search-inside animated bounceInUp"> <i class="icon-close search-close fa fa-times"></i>
-                                  <div class="search-overlay"></div>
-                                  <div class="position-center-center">
-                                    <div class="search">
-                                      <form>
-                                        <input type="search" placeholder="Search Shop">
-                                        <button type="submit"><i class="fa fa-search"></i></button>
-                                      </form>
-                                    </div>
-                                  </div>
                                 </div>
-                              </div>
-                        </div>							
+                                <!-- navbar-collapse -->
+                            </div>
+                            <!-- col-md-10 -->
+                            <div class="col-md-2 col-sm-2 col-xs-6 shopping-cart-section">
+                                <div class="shopping-cart-icon">
+                                    <ul>
+                                        <li><a href="#" class="search-click"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+                                        <li><a routerLink="/cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- row -->
+                    </div>
+                    <!-- container -->
+                </div>
+                <!--navbar -->
+                <div id="search-open" class="top-search">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="input-group"> <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                <input type="text" class="form-control" placeholder="Search">
+                                <a class="input-group-addon close-search search-close"><i class="fa fa-times"></i></a> 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!--  Menu -->
         </div>
     </div>
-    <!-- header-bottom-area end -->
-    <!-- mobile-menu-area start -->
-    <div class="mobile-menu-area visible-xs visible-sm">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="mobile-menu">
-                        <nav id="dropdown">
-                            <ul>
-                                <li><a href="assets/index.html">Home</a>
-                                    <ul>
-                                        <li><a href="assets/index.html">home version 1</a></li>
-                                        <li><a href="assets/index-2.html">home version 2</a></li>
-                                        <li><a href="assets/index-3.html">home version 3</a></li>
-                                        <li><a href="assets/index-4.html">home version box</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="assets/about.html">About</a></li>
-                                <li><a href="assets/blog.html">blog</a></li>
-                                <li><a href="assets/shop.html">Shop</a>
-                                    <ul>
-                                        <li><a href="#">WOMEN CLOTH</a>
-                                            <ul>
-                                                <li><a href="assets/shop.html">casual shirt</a></li>
-                                                <li><a href="assets/shop.html">rikke t-shirt</a></li>
-                                                <li><a href="assets/shop.html">mia top </a></li>
-                                                <li><a href="assets/shop.html">muscle tee</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">MEN CLOTH</a>
-                                            <ul>
-                                                <li><a href="assets/shop.html">casual shirt</a></li>
-                                                <li><a href="assets/shop.html">rikke t-shirt</a></li>
-                                                <li><a href="assets/shop.html">mia top </a></li>
-                                                <li><a href="assets/shop.html">muscle tee</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">WOMEN JEWELRY</a>
-                                            <ul>
-                                                <li><a href="assets/shop.html">necklace </a></li>
-                                                <li><a href="assets/shop.html">chunky short striped</a></li>
-                                                <li><a href="assets/shop.html">samhar cuff </a></li>
-                                                <li><a href="assets/shop.html">nail set</a></li>
-                                            </ul>
-                                        </li>											
-                                    </ul>
-                                </li>
-                                <li><a href="assets/shop.html">Footwear </a></li>
-                                <li><a href="#">Pages</a>
-                                    <ul>
-                                        <li><a href="assets/about.html">about</a></li>
-                                        <li><a href="assets/contact.html">contact</a></li>
-                                        <li><a href="assets/cart.html">shopping cart</a></li>
-                                        <li><a href="assets/checkout.html">checkout</a></li>
-                                        <li><a href="assets/wishlist.html">wishlist</a></li>
-                                        <li><a href="assets/login.html">login</a></li>
-                                        <li><a href="assets/shop.html">shop left sidebar</a></li>
-                                        <li><a href="assets/shop-right-sidebar.html">shop right sidebar</a></li>
-                                        <li><a href="assets/shop-4-column.html">shop 4 column</a></li>
-                                        <li><a href="assets/product-details.html">product details</a></li>
-                                        <li><a href="assets/404.html">404 error</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="assets/contact.html">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>					
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- mobile-menu-area end -->				
 </header>
-<!-- header end -->
+<!--//================Header section end==============//-->
+
 <router-outlet></router-outlet>
 
-<!-- footer start -->
-<footer>
-    <div class="footer-subscribe-area pad-60">
+<!--//================Footer section start==============//-->
+<div class="footer-section footer_fixed">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="footer-box">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-one footer-first-box">
+                                <h5>about faraway</h5>
+                                <p><span class="faraway">faraway</span> Website Builder is a big library designed web elements which help you create website .</p>
+                                <p><span class="working-time">working hours : monday-saturday</span></p>
+                                <p class="marB0"><span class="working-time">close : sunday</span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-6 col-xs-12">
+                            <div class="footer-box-two footer-first-box footer-res">
+                                <h5>information</h5>
+                                <ul class="footer-services">
+                                    <li><a href="#">about us</a></li>
+                                    <li><a href="#">service</a></li>
+                                    <li><a href="#">blog</a></li>
+                                    <li><a href="#">sellers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                            <div class="footer-box-two footer-res">
+                                <h5>store</h5>
+                                <ul class="footer-services">
+                                    <li><a href="#">accessories</a></li>
+                                    <li><a href="#">new in</a></li>
+                                    <li><a href="#">women</a></li>
+                                    <li><a href="#">top brands</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-3 col-xs-12">
+                            <div class="footer-box-two footer-res">
+                                <h5>my account</h5>
+                                <ul class="footer-services">
+                                    <li><a href="#">sign in</a></li>
+                                    <li><a href="#">view cart</a></li>
+                                    <li><a href="#">my wishlist</a></li>
+                                    <li><a href="#">help</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-7 col-xs-12">
+                            <div class="footer-box-right footer-box-two">
+                                <h5>newsletter</h5>
+                                <p>Sign up for our mailing list to get the latest updates and offers.</p>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter your email address" aria-describedby="basic-addon2">
+                                    <span class="input-group-addon" id="basic-addon2"><i class="fa fa-paper-plane" aria-hidden="true"></i></span>
+                                </div>
+                                <ul class="footer-social-icon">
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-apple" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="footer-gallery">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div id="footer_slider" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <figure>
+                                    <img src="assets/images/footer/footer-slider-1.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <figure>
+                                    <img src="assets/images/footer/footer-slider-2.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <figure>
+                                    <img src="assets/images/footer/footer-slider-3.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <figure>
+                                    <img src="assets/images/footer/footer-slider-4.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <figure>
+                                    <img src="assets/images/footer/footer-slider-5.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <figure>
+                                    <img src="assets/images/footer/footer-slider-6.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <figure>
+                                    <img src="assets/images/footer/footer-slider-7.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <figure>
+                                    <img src="assets/images/footer/footer-slider-8.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <figure>
+                                    <img src="assets/images/footer/footer-slider-9.jpg" alt="">
+                                </figure>
+                            </div>
+                            <div class="item">
+                                <figure>
+                                    <img src="assets/images/footer/footer-slider-10.jpg" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-text">
+                    <p><a href="#">@ faraway on instagram</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-last-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="subscribe-us text-center">
-                        <h4>NEWSLETTER</h4>
-                        <span>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odi </span>
-                        <form action="#">
-                            <input type="email" placeholder="Enter your email address">
-                            <button type="submit">SEND ME</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- footer-top-area start -->
-    <div class="footer-top-area">
-        <div class="container">
-            <div class="row">
-                <!-- footer-widget start -->
-                <div class="col-lg-3 col-md-3 col-sm-4 footer-marg">
-                    <div class="footer-widget">
-                        <h3>ABOUT US</h3>
-                        <p>Cras ac tempus ipsum etiam eu libero suscipit. Zolutpat ante a malesuada nunc, junc sit amet elementum est semper leo vel ante vestibulum </p>
-                        <div class="social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>								
-                    </div>
-                </div>
-                <!-- footer-widget end -->					
-                <!-- footer-widget start -->
-                <div class="col-lg-2 col-md-2 hidden-md hidden-sm footer-marg">
-                    <div class="footer-widget">
-                        <h3>OUR INFORMATION</h3>
+                <div class="col-md-7 col-sm-8 col-xs-12">
+                    <div class="footer-last-text">
                         <ul class="footer-menu">
-                            <li><a href="#">Return Policy</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Site Map</a></li>
-                            <li><a href="#">Store Hours</a></li>
-                        </ul>								
-                    </div>
-                </div>
-                <!-- footer-widget end -->
-                <!-- footer-widget start -->
-                <div class="col-lg-2 col-md-3 col-sm-4 hidden-sm footer-marg">
-                    <div class="footer-widget">
-                        <h3>MY ACCOUNT</h3>
-                        <ul class="footer-menu">
-                            <li><a href="#">Delivery</a></li>
-                            <li><a href="#">Payment</a></li>
-                            <li><a href="#">Return Policy</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">help & FAQs </a></li>
+                            <li><a href="#">privacy policy</a></li>
                         </ul>
+                        <p>&copy; 2017 FARAWAY. Theme by Desideals4u. Website Template by HTML</p>
                     </div>
                 </div>
-                <!-- footer-widget end -->
-                <!-- footer-widget start -->
-                <div class="col-lg-2 col-md-3 col-sm-4 footer-marg">
-                    <div class="footer-widget">
-                        <h3>Our services</h3>
-                        <ul class="footer-menu">
-                            <li><a href="#">Shipping & Returns</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
-                            <li><a href="#">International Shipping</a></li>
-                            <li><a href="#">Affiliates</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- footer-widget end -->
-                <!-- footer-widget start -->
-                <div class="col-lg-3 col-md-3 col-sm-4 footer-marg">
-                    <div class="footer-widget">
-                        <h3>Our instagram</h3>
-                        <ul class="instagram-thumb">
-                            <li><a href="#"><img alt="" src="assets/img/instagram/thumbnail1.jpg"></a></li>
-                            <li><a href="#"><img alt="" src="assets/img/instagram/thumbnail2.jpg"></a></li>
-                            <li><a href="#"><img alt="" src="assets/img/instagram/thumbnail3.jpg"></a></li>
-                            <li><a href="#"><img alt="" src="assets/img/instagram/thumbnail4.jpg"></a></li>
-                            <li><a href="#"><img alt="" src="assets/img/instagram/thumbnail5.jpg"></a></li>
-                            <li><a href="#"><img alt="" src="assets/img/instagram/thumbnail6.jpg"></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- footer-widget end -->						
-            </div>
-        </div>
-    </div>
-    <!-- footer-top-area end -->
-    <!-- footer-bottom-area start -->
-    <div class="footer-bottom-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="copyright">
-                        <p>Copyright © <a href="#">Richman</a>. All Rights Reserved</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="payment-img">
-                        <img src="assets/img/payment.png" alt="" />
+                <div class="col-md-5 col-sm-4 col-xs-12">
+                    <div class="footer-last-right">
+                        <figure>
+                            <img src="assets/images/footer/payment-icons.png" alt="">
+                        </figure>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- footer-bottom-area end -->			
-</footer>
-<!-- footer end -->
-
-
-<!-- Modal -->
-<div class="modal fade" id="productModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
-      </div>
-      <div class="modal-body">
-        <div class="modal-img">
-            <a href="assets/shop.html"><img src="assets/img/product/1.jpg" alt="" /></a>
-        </div>
-        <div class="modal-pro-content">
-            <h3><a href="assets/single-product.html">Phasellus Vel Hendrerit</a></h3>
-            <div class="pro-rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-            </div>
-            <span>(2 customer reviews)</span>
-            <div class="price">
-                <span>$70.00</span>
-                <span class="old">$80.11</span>
-            </div>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet.</p>	
-            <form action="#">
-                <input type="number" value="1" />
-                <button>Add to cart</button>
-            </form>
-            <div class="product_meta">
-                <span class="posted_in">Categories: <a rel="tag" href="#">Albums</a>, <a rel="tag" href="#">Music</a></span> <span class="tagged_as">Tags: <a rel="tag" href="#">Albums</a>, <a rel="tag" href="#">Music</a></span> 
-            </div>
-            <div class="social">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-google-plus"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-pinterest"></i></a>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
-<!-- Modal end -->
+<!--//================Footer section end==============//-->
+<!--//================Quick view section start==============//-->
+<div class="quick-vive-popap">
+    <div class="container">
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-lg" >
+                <div class="Quick-view-popup modal-content text-left">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="col-md-12 col-xs-12 popap-open-box">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="col-xs-12 marB30">
+                                        <figure>
+                                            <img src="assets/images/best-product/product-3.jpg" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 responsive-top">
+                                <h3 class="theme-headdings text-left  product-detail-title s"><a href="#">Your Product Title</a></h3>
+                                <div class="product-rating">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">3 review(s)</a></li>
+                                    </ul>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="per-box texy-left marT15">
+                                    <p>Morbi mollis vestibulum sollicitudin. in eros a justo facilisis rutrum. Aenean id ullamcorper libero. tempor et purus vitae, consectetur varius nunc.</p>
+                                </div>
+                                <div class="product-detail-btn  padT15">
+                                    <div class="form-row col-sm-5 col-xs-12 country-boxs billing-box select ">
+                                        <div class="row">
+                                            <p>
+                                                <label for="billing_state28">Material</label>
+                                                <select class="billing_state28" id="billing_state28" name="billing_state">
+                                                    <option value="">Select Color</option>
+                                                    <option value="AP">Red</option>
+                                                    <option value="AR">Blue</option>
+                                                    <option value="AS">Green</option>
+                                                    <option value="BR">Yellow</option>
+                                                    <option value="CT">Black</option>
+                                                </select>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-row col-sm-5 country-boxs billing-box select down ">
+                                        <div class="row ">
+                                            <p>
+                                                <label for="billing_state27">Brands</label>
+                                                <select class="billg_state" id="billing_state27" name="billing_state">
+                                                    <option value="">Select Brands</option>
+                                                    <option value="AP">PTM</option>
+                                                    <option value="AR">Clara</option>
+                                                    <option value="AS">Ziveg</option>
+                                                    <option value="BR">Clara</option>
+                                                </select>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-7 row">
+                                    <div class="order-data box order-table ">
+                                        <div class="order-table-cell order-text product-input-type">
+                                            <input type="number" value="01" class="qty" name="qty1">		
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-sm-5 product-box-btm-blog row">
+                                    <a href="#" class="template-button light pro btn left marT">Add To Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "DoAn5": {
+    "BaiTL-Home2": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/DoAn5",
+            "outputPath": "dist/BaiTL-Home2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "DoAn5:build"
+            "browserTarget": "BaiTL-Home2:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "DoAn5:build:production"
+              "browserTarget": "BaiTL-Home2:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "DoAn5:build"
+            "browserTarget": "BaiTL-Home2:build"
           }
         },
         "test": {
@@ -110,19 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "DoAn5:serve"
+            "devServerTarget": "BaiTL-Home2:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "DoAn5:serve:production"
+              "devServerTarget": "BaiTL-Home2:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "DoAn5",
+  "defaultProject": "BaiTL-Home2",
   "cli": {
-    "analytics": "8fbb68ab-9c82-46b5-920c-193532517818"
+    "analytics": "a41c7739-bdfa-46d0-ac5b-eb02b6d4e77c"
   }
 }

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'VVT Shop website thời trang nam';
+  title = 'BaiTL-Home2';
 }
