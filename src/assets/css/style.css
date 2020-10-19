@@ -278,13 +278,13 @@ input[type=radio]:checked ~ .check {
     border: 5px solid #0DFF92;
 }
 input[type=radio]:checked ~ label {
-    #color: #2e2e2e;
+    color: #2e2e2e;
 }
 input[type=checkbox]:checked ~ .box-check {
     border: 2px solid;
 }
 input[type=checkbox]:checked ~ label {
-    #color: #2e2e2e;
+    color: #2e2e2e;
 }
 input[type=checkbox]:checked ~ .box-check:before {
     opacity: 1;
@@ -1468,8 +1468,8 @@ span.overlay {
     display: inline-block;
 }
 .template-button {
-    background-color: #000;
-    border-color: #000;
+    background-color: #f1a6a6;
+    border-color: #f1a6a6;
     color: #fff;
     text-transform: uppercase;
     padding: 7px 30px;
@@ -1894,7 +1894,8 @@ ul.cart-icon li a i {
     transition: all 0.45s ease-in-out;
 }
 .arrival-image-content span {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 700;
 }
 .arrival-image-content span del {
     color: #999999;
@@ -2078,14 +2079,14 @@ ul.cloth-rating li i {
 }
 .container .mix {
     text-align: left;
-    #margin-bottom: 30px;
+    margin-bottom: 30px;
     display: none;
 }
 .container .mix:after {
     content: attr(data-myorder);
     color: white;
     font-size: 15px;
-    #display: inline-block;
+    display: inline-block;
     vertical-align: top;
     font-weight: 700;
 }
@@ -2095,14 +2096,14 @@ ul.cloth-rating li i {
 }
 .container-fluid .mix {
     text-align: left;
-    #margin-bottom: 30px;
+    margin-bottom: 30px;
     display: none;
 }
 .container-fluid .mix:after {
     content: attr(data-myorder);
     color: white;
     font-size: 15px;
-    #display: inline-block;
+    display: inline-block;
     vertical-align: top;
     font-weight: 700;
 }

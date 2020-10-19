@@ -11,9 +11,9 @@
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="slider-content item-2">
-                                    <h4>collection</h4>
-                                    <h1>new look fashion</h1>
-                                    <a href="#" class="template-button">mua sắm ngay</a>
+                                    <h4>VT SHOP</h4>
+                                    <h5>VT SHOP - Thời trang nam uy tín,<br><br>Rất hân hạnh được phục vụ quý khách hàng !</h5>
+                                    <a routerLink="/" class="template-button">mua sắm ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -31,9 +31,9 @@
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="slider-content item-2">
-                                    <h4>collection</h4>
-                                    <h1>new look fashion</h1>
-                                    <a href="#" class="template-button">mua sắm ngay</a>
+                                    <h4>VT SHOP</h4>
+                                    <h5>VT SHOP - Thời trang nam uy tín,<br><br>Rất hân hạnh được phục vụ quý khách hàng !</h5>
+                                    <a routerLink="/" class="template-button">mua sắm ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -51,9 +51,9 @@
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="slider-content item-2">
-                                    <h4>collection</h4>
-                                    <h1>new look fashion</h1>
-                                    <a href="#" class="template-button">mua sắm ngay</a>
+                                    <h4>VT SHOP</h4>
+                                    <h5>VT SHOP - Thời trang nam uy tín,<br><br>Rất hân hạnh được phục vụ quý khách hàng !</h5>
+                                    <a routerLink="/" class="template-button">mua sắm ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -152,12 +152,11 @@
                                                 <span class="overlay-two"></span>
                                                 <img src="assets/images/{{it.hinhanh}}"alt="">
                                                 <figcaption>
-                                                    <p><span class="new-sale">new</span></p>
+                                                    <p><span class="new-sale">sale</span></p>
                                                     <ul class="cart-icon">
-                                                        <li><a href="#"><span class="add-to-wish">add to wishlist</span><i class="fa fa-heart" aria-hidden="true"></i></a></li>
                                                         <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                                                        <li><a href="#"><span class="add-to-wish">buy now</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                                                        <li><a href="#"><span class="add-to-wish">quick link</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                                        <li><a (click)="addToCart(it)"><span class="add-to-wish">Thêm vào Giỏ</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                                                        <li><a routerLink="/detail/{{it.masp}}"><span class="add-to-wish">Xem chi tiết</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
                                                     </ul>
                                                 </figcaption>
                                             </figure>
@@ -171,7 +170,7 @@
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
                                             </ul>
-                                            <span>{{it.giatien}}<del>{{it.giakm}}</del></span>
+                                            <span style="color: #1bbc9b">{{it.giakm}} VNĐ<del>{{it.giatien}}</del></span>
                                         </div>
                                     </div>
                                 </div>
@@ -195,9 +194,9 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="banner-text">
-                    <h4>The Latest</h4>
-                    <h1>Trending Fashion</h1>
-                    <a href="#" class="template-button">shop now</a>
+                    <h4>Mới Nhất</h4>
+                    <h1>Xu hướng thời trang</h1>
+                    <a routerLink="/" class="template-button">Mua sắm ngay</a>
                 </div>
             </div>
         </div>
@@ -234,10 +233,9 @@
                                         <img src="assets/images/{{it.hinhanh}}" alt="">
                                         <figcaption>
                                             <ul class="cart-icon">
-                                                <li><a href="#"><span class="add-to-wish">add to wishlist</span><i class="fa fa-heart" aria-hidden="true"></i></a></li>
                                                 <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                                                <li><a href="#"><span class="add-to-wish">buy now</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                                                <li><a href="#"><span class="add-to-wish">quick link</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                                <li><a (click)="addToCart(it)"><span class="add-to-wish">Thêm vào Giỏ</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                                                <li><a routerLink="/detail/{{it.masp}}"><span class="add-to-wish">Xem chi tiết</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
                                             </ul>
                                         </figcaption>
                                     </figure>
@@ -251,7 +249,7 @@
                                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                         <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
                                     </ul>
-                                    <span>{{it.giatien}}<del>$55.00</del></span>
+                                    <span style="color: #1bbc9b">{{it.giatien}} VNĐ</span>
                                 </div>
                             </div>
                         </div>

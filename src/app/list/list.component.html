@@ -10,8 +10,8 @@
                         </div>
                         <div class="breadcrum-box">
                             <ul class="breadcrum">
-                                <li><a href="index-2.html">home</a></li>
-                                <li class="active"><a href="#">our collection</a></li>
+                                <li><a routerLink="/">Trang chủ</a></li>
+                                <li class="active"><a routerLink="/list">Danh mục</a></li>
                             </ul>
                         </div>
                     </div>
@@ -75,14 +75,14 @@
                 </div>
                 <div class="best_product" id="collection_box">
                     <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">   
+                            <div class="row">  <ng-container *ngFor="let lst of list">      
                                 <div class="col-md-4 col-sm-6 col-xs-12 marB30">
                                     <div class="arrival-image">
                                         <div class="arrival-image-overlay">
                                             <figure>
                                                 <span class="overlay-two"></span>
-                                                <img src="assets/images/best-product/product-1.jpg" alt="">
+                                                <img src="assets/images/{{lst.hinhanh}}" alt="">
                                                 <figcaption>
                                                     <ul class="cart-icon">
                                                         <li><a href="#"><span class="add-to-wish">add to wishlist</span><i class="fa fa-heart" aria-hidden="true"></i></a></li>
@@ -94,7 +94,7 @@
                                             </figure>
                                         </div>
                                         <div class="arrival-image-content">
-                                            <h4><a routerLink="/detail/:id">Cras in nunc non ipsum duo</a></h4>
+                                            <h4><a routerLink="/detail/{{lst.masp}}">{{lst.tensp}}</a></h4>
                                             <ul class="cloth-rating">
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -102,19 +102,16 @@
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
                                             </ul>
-                                            <span>$90.00<del>$55.00</del></span>
+                                            <span style="color: #1bbc9b">{{lst.giatien}} VNĐ</span>
                                         </div>
-                                    </div>
+                                    </div>                            
                                 </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="product-button">
-                                        <a href="#" class="template-button">view all</a>
-                                    </div>
-                                </div>
+                            </ng-container> 
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
+               
                 <div class="best-product-deatil" style="display:none;" id="collection_sidebar_list">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12 marB30">
@@ -444,20 +441,12 @@
             </div>
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <div class="categories-section">
-                    <h4>categories</h4>
+                    <h4>Danh Mục</h4>
+                    <ng-container *ngFor="let lst2 of list">
                     <ul class="widget-content">
-                        <li><a href="#">bags & accessories</a></li>
-                        <li><a href="#">comos de milano</a></li>
-                        <li><a href="#">lorem et dorus</a></li>
-                        <li><a href="#">lynn cosmopolis</a></li>
-                        <li class="active"><a href="#"> men</a></li>
-                        <li><a href="#">milancelos a lanos</a></li>
-                        <li><a href="#">new in</a></li>
-                        <li><a href="#">nor loremirus</a></li>
-                        <li><a href="#">sale & special offers</a></li>
-                        <li><a href="#">top brands</a></li>
-                        <li><a href="#">women</a></li>
+                        <li><a routerLink="/list/{{lst2.maloai}}">{{lst2.tenloai}}</a></li>
                     </ul>
+                    </ng-container>
                 </div>
                 <div class="color-section">
                     <h4 class="oncolor">color</h4>

@@ -12,6 +12,7 @@ import 'rxjs/add/operator/takeUntil';
 export class HomeComponent extends BaseComponent implements OnInit {
   list_item:any;
   spkm:any;
+  private _cart: any;
   constructor(injector: Injector) { 
     super(injector);
   }
@@ -33,5 +34,9 @@ export class HomeComponent extends BaseComponent implements OnInit {
         this.loadScripts();
       });
     }, err => { });
+  }
+  addToCart(it) { 
+    this._cart.addToCart(it);
+    alert('Thêm thành công!'); 
   }
 }

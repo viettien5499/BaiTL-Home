@@ -27,19 +27,24 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
                 <div class="registerBox">
-                    <h4>create an account</h4>
+                    <h4><b>Đăng Ký</b></h4>
                     <form class="register-form">
-                        <h4>your personal information</h4>
-                        <label>first name</label>
-                        <input type="text" placeholder="first name">
-                        <label>last name</label>
-                        <input type="text" placeholder="last name">
+                        <h4>THÔNG TIN CÁ NHÂN CỦA BẠN ?</h4>
+                        <label>Họ và Tên</label>
+                        <input type="text" required placeholder="Nhập họ tên">
+                        <label>Giới tính</label>
+                        <input type="text" required placeholder="Nhập giới tính">
                         <label>email</label>
-                        <input type="text" placeholder="email">
+                        <input type="text" required placeholder="Nhập email">
                         <label>password</label>
-                        <input type="password" placeholder="password">
-                        <a href="#" class="template-button">create an account</a>
-                        <p><a href="collection-product.html"><i class="fa fa-long-arrow-left marR10" aria-hidden="true"></i>return to store</a></p>
+                        <input type="password" required placeholder="Nhập mật khẩu">
+                        <label>Số điện thoại</label>
+                        <input type="number" required placeholder="Nhập số điện thoại">
+                        <label>địa chỉ</label>
+                        <input type="text" placeholder="Nhập địa chỉ">
+                        <br><br>
+                        <a href="#" style="padding: 7px 220px;" class="template-button">Đăng ký</a>
+                        <p><a routerLink="/login"><i class="fa fa-long-arrow-left marR10" aria-hidden="true"></i>trở lại đăng nhập ?</a></p>
                     </form>
                 </div>
             </div>

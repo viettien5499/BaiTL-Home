@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <figure class="logo">
-                            <a href="index-2.html"><img style="width: 125px; height: 125px; border-radius: 100px;" src="assets/images/logovip3.png" alt=""></a>
+                            <a routerLink="/"><img style="width: 125px; height: 125px; border-radius: 100px;" src="assets/images/logovip3.png" alt=""></a>
                         </figure>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-12">
@@ -73,85 +73,12 @@
                                                 <li>
                                                     <a routerLink="/" class="header-menu-one">Trang Chủ<i aria-hidden="true"></i></a>
                                                 </li>
-                                                <li class="mega-menu">
-                                                    <a routerLink="/list/:id" class="header-menu-one" data-toggle="dropdown">Danh mục<i class="fa fa-caret-down marL5" aria-hidden="true"></i></a>
-                                                    <ul class="dropdown-menu sm-nowrap">
-                                                        <li>
-                                                            <div class="row">
-                                                                <div class="col-md-7 col-sm-7 col-xs-12">
-                                                                    <div class="col-sm-4 col-xs-12">
-                                                                        <div class="title">
-                                                                            <h4>Áo Thun</h4>
-                                                                            <div class="page-links">
-                                                                                <div>
-                                                                                    <a href="#"> Jackets</a>
-                                                                                </div>
-                                                                                <div>
-                                                                                    <a href="#"> Sweaters</a>
-                                                                                </div>
-                                                                                <div>
-                                                                                    <a href="#">Tees</a>
-                                                                                </div>
-                                                                                <div>
-                                                                                    <a href="#"> Bras & Tanks</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-sm-4 col-xs-12">
-                                                                        <div class="title">
-                                                                            <h4>Áo Sơ Mi</h4>
-                                                                            <div class="page-links">
-                                                                                <div>
-                                                                                    <a href="#"> Jackets</a>
-                                                                                </div>
-                                                                                <div>
-                                                                                    <a href="#"> Sweaters</a>
-                                                                                </div>
-                                                                                <div>
-                                                                                    <a href="#">Tees</a>
-                                                                                </div>
-                                                                                <div>
-                                                                                    <a href="#"> Bras & Tanks</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-sm-4 col-xs-12">
-                                                                        <div class="title">
-                                                                            <h4>Quần Dài</h4>
-                                                                            <div class="page-links">
-                                                                                <div>
-                                                                                    <a href="#"> Jackets</a>
-                                                                                </div>
-                                                                                <div>
-                                                                                    <a href="#"> Sweaters</a>
-                                                                                </div>
-                                                                                <div>
-                                                                                    <a href="#">Tees</a>
-                                                                                </div>
-                                                                                <div>
-                                                                                    <a href="#"> Bras & Tanks</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-5 col-sm-5 col-xs-12">
-                                                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                                                        <figure class="menu-image zoom-effect">
-                                                                            <img src="assets/images/all-image/menu-image-one.jpg" alt="">
-                                                                            <figcaption>
-                                                                                <div class="menu-image-text">
-                                                                                    <h3>shop the bags</h3>
-                                                                                    <a href="#" class="template-button">shop now</a>
-                                                                                </div>
-                                                                            </figcaption>
-                                                                        </figure>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
+                                                <li>
+                                                    <a routerLink="/list/:id" class="header-menu-one">Danh Mục<i class="fa fa-caret-down marL5" aria-hidden="true"></i></a>
+                                                    <ul class="dropdown-menu">
+                                                        <ng-container *ngFor="let list of menus">
+                                                        <li><a routerLink="/list/{{list.maloai}}">{{list.tenloai}}</a></li>
+                                                        </ng-container>>
                                                     </ul>
                                                 </li>
                                                 <li>
@@ -160,7 +87,7 @@
                                                 <li>
                                                     <a routerLink="/gioithieu" class="header-menu-one">Giới thiệu<i aria-hidden="true"></i></a> 
                                                 </li>
-                                                <li><a routerLink="/contact" class="header-menu-one">contact</a></li>
+                                                <li><a routerLink="/contact" class="header-menu-one">Liên hệ</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -172,7 +99,6 @@
                                 <div class="shopping-cart-icon">
                                     <ul>
                                         <li><a href="#" class="search-click"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
                                         <li><a routerLink="/cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
                                     </ul>
                                 </div>
