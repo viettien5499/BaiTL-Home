@@ -33,7 +33,7 @@
                         <form class="login-form">
                             <p>   
                                 <label>email <span>*</span></label>
-                                <input formControlName="username" type="text">
+                                <input formControlName="username" type="text" required>
                                 <span class="col alert alert-danger" role="alert"
                                 *ngIf="(loginForm.controls.username?.errors?.required
                                 && loginForm.controls.username?.touched) && loginForm.controls.username?.touched" >

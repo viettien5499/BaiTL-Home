@@ -1,5 +1,6 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { BaseComponent } from '../lib/base-component';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list',
@@ -12,6 +13,8 @@ export class ListComponent extends BaseComponent implements OnInit {
   pageSize: any;
   totalItems:any;
   Maloai:any;
+  menus:any;
+  spkm:any;
   private _cart: any;
   constructor(injector: Injector) { 
     super(injector);
@@ -19,7 +22,7 @@ export class ListComponent extends BaseComponent implements OnInit {
   ngOnInit(): void {
     this.list = [];
     this.page = 1;
-    this.pageSize = 9;
+    this.pageSize = 12;
     this._route.params.subscribe(params => {
       this.Maloai = params['id'];
       this._api.post('/api/sanpham/search', { page: this.page, pageSize: this.pageSize, Maloai: this.Maloai}).takeUntil(this.unsubscribe).subscribe(res => {
@@ -28,8 +31,22 @@ export class ListComponent extends BaseComponent implements OnInit {
         setTimeout(() => {
           this.loadScripts();
         },);
-        }, err => { });       
-   });   
+        }, err => { }); 
+        this._api
+        .get('/api/loaisanpham/getloaisp')
+        .takeUntil(this.unsubscribe)
+        .subscribe(res => {
+          this.menus = res;
+        });       
+   });
+   Observable.combineLatest(
+    this._api.get('/api/sanpham/get-spkm'),
+  ).takeUntil(this.unsubscribe).subscribe(res => {
+    this.spkm = res[0];
+    setTimeout(() => {
+      this.loadScripts();
+    });
+  }, err => { });   
   }
   loadPage(page) { 
     this._route.params.subscribe(params => {

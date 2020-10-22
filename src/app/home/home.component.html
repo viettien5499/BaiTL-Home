@@ -141,7 +141,6 @@
             <div class="col-md-12">
                 <div class="slider-two">
                     <div class="row">
-                    
                         <div id="new_arrival" class="owl-carousel owl-theme">
                             <ng-container *ngFor="let it of spkm">
                             <div class="item">
@@ -155,7 +154,7 @@
                                                     <p><span class="new-sale">sale</span></p>
                                                     <ul class="cart-icon">
                                                         <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                                                        <li><a (click)="addToCart(it)"><span class="add-to-wish">Thêm vào Giỏ</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                                                        <li><a><span class="add-to-wish" (click)="addToCart(it)">Thêm vào Giỏ</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
                                                         <li><a routerLink="/detail/{{it.masp}}"><span class="add-to-wish">Xem chi tiết</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
                                                     </ul>
                                                 </figcaption>
@@ -209,14 +208,14 @@
         <div class="row">
             <div class="col-md-5 col-sm-5 col-xs-12">
                 <div class="journey-heading">
-                    <h4><span>best product</span></h4>
+                    <h4><span>Sản Phẩm Mới</span></h4>
                 </div>
             </div>
             <div class="col-md-7 col-sm-7 col-xs-12">
                 <div class="product_menu">
                     <ul>
-                        <li><a class="filter-1 wa-button hover-color active" data-filter="all">all</a></li>
-                        <li><a class="filter-1 wa-button hover-color" data-filter=".cat1">women</a></li>
+                        <li><a class="filter-1 wa-button hover-color active" data-filter="all">New</a></li>
+                        <li><a class="filter-1 wa-button hover-color" data-filter=".cat1">Best</a></li>
                         <li><a class="filter-1 wa-button hover-color" data-filter=".cat2">men</a></li>
                     </ul>
                 </div>
@@ -224,7 +223,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12 padT30">
                 <div class="row">
                     <div id="MixItUp1">
-                        <ng-container *ngFor="let it of list_item">
+                        <ng-container *ngFor="let it of sptot">
                         <div class="col-md-3 col-sm-6 col-xs-12 marB30 mix cat1">
                             <div class="arrival-image">
                                 <div class="arrival-image-overlay">
@@ -282,11 +281,6 @@
                                     </ul>
                                     <span>$90.00<del>$55.00</del></span>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="product-button">
-                                <a href="#" class="template-button">view all</a>
                             </div>
                         </div>
                     </div>

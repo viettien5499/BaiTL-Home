@@ -22,5 +22,4 @@ export class LayoutComponent extends BaseComponent implements OnInit {
       this.menus = res;
     }); 
   }
-
 }

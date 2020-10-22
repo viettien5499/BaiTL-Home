@@ -1,5 +1,6 @@
 import { BaseComponent } from './../lib/base-component';
 import { Component, OnInit, Injector } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-detail',
@@ -8,6 +9,8 @@ import { Component, OnInit, Injector } from '@angular/core';
 })
 export class DetailComponent extends BaseComponent implements OnInit {
   detail:any;
+  splq:any;
+  private _cart: any;
   constructor(injector: Injector) { 
     super(injector);
   }
@@ -22,7 +25,14 @@ export class DetailComponent extends BaseComponent implements OnInit {
         });
       }); 
     });
-
+    Observable.combineLatest(
+      this._api.get('/api/sanpham/get-splq'),
+    ).takeUntil(this.unsubscribe).subscribe(res => {
+      this.splq = res[0];
+      setTimeout(() => {
+        this.loadScripts();
+      });
+    }, err => { });
   }
 }
 

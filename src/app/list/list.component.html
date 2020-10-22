@@ -111,7 +111,7 @@
                         </div>
                     </div>
                 </div> 
-               
+              
                 <div class="best-product-deatil" style="display:none;" id="collection_sidebar_list">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12 marB30">
@@ -442,7 +442,7 @@
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <div class="categories-section">
                     <h4>Danh Mục</h4>
-                    <ng-container *ngFor="let lst2 of list">
+                    <ng-container *ngFor="let lst2 of menus">
                     <ul class="widget-content">
                         <li><a routerLink="/list/{{lst2.maloai}}">{{lst2.tenloai}}</a></li>
                     </ul>
@@ -484,8 +484,9 @@
                     </ul>
                 </div>
                 <div class="featured-product">
-                    <h5>featured products</h5>
+                    <h5>Bạn có quan tâm sản phẩm này?</h5>
                     <div id="sidebar_collection" class="owl-carousel owl-theme">
+                        <ng-container *ngFor="let sp of spkm">
                         <div class="item">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="row">
@@ -493,11 +494,10 @@
                                         <div class="arrival-image-overlay">
                                             <figure>
                                                 <span class="overlay-two"></span>
-                                                <img src="assets/images/best-product/product-1.jpg" alt="">
+                                                <img src="assets/images/{{sp.hinhanh}}" alt="">
                                                 <figcaption>
-                                                    <p><span class="new-sale">new</span></p>
+                                                    <p><span class="new-sale">Sale</span></p>
                                                     <ul class="cart-icon">
-                                                        <li><a href="#"><span class="add-to-wish">add to wishlist</span><i class="fa fa-heart" aria-hidden="true"></i></a></li>
                                                         <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
                                                         <li><a href="#"><span class="add-to-wish">buy now</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
                                                         <li><a href="#"><span class="add-to-wish">quick link</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
@@ -506,7 +506,7 @@
                                             </figure>
                                         </div>
                                         <div class="arrival-image-content">
-                                            <h4><a href="#">Cras in nunc non ipsum duo</a></h4>
+                                            <h4><a routerLink="/detail/{{sp.masp}}">{{sp.tensp}}</a></h4>
                                             <ul class="cloth-rating">
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -514,84 +514,14 @@
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
                                             </ul>
-                                            <span>$90.00<del>$55.00</del></span>
+                                            <span style="color: #1bbc9b">{{sp.giakm}} VNĐ<del>{{sp.giatien}}</del></span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="row">
-                                    <div class="arrival-image">
-                                        <div class="arrival-image-overlay">
-                                            <figure>
-                                                <span class="overlay-two"></span>
-                                                <img src="assets/images/best-product/product-2.jpg" alt="">
-                                                <figcaption>
-                                                    <p><span class="new-sale">new</span></p>
-                                                    <ul class="cart-icon">
-                                                        <li><a href="#"><span class="add-to-wish">add to wishlist</span><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-                                                        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                                                        <li><a href="#"><span class="add-to-wish">buy now</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                                                        <li><a href="#"><span class="add-to-wish">quick link</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
-                                                    </ul>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                        <div class="arrival-image-content">
-                                            <h4><a href="#">Cras in nunc non ipsum duo</a></h4>
-                                            <ul class="cloth-rating">
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
-                                            </ul>
-                                            <span>$90.00<del>$55.00</del></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="row">
-                                    <div class="arrival-image">
-                                        <div class="arrival-image-overlay">
-                                            <figure>
-                                                <span class="overlay-two"></span>
-                                                <img src="assets/images/best-product/product-3.jpg" alt="">
-                                                <figcaption>
-                                                    <ul class="cart-icon">
-                                                        <li><a href="#"><span class="add-to-wish">add to wishlist</span><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-                                                        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                                                        <li><a href="#"><span class="add-to-wish">buy now</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                                                        <li><a href="#"><span class="add-to-wish">quick link</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
-                                                    </ul>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                        <div class="arrival-image-content">
-                                            <h4><a href="#">Cras in nunc non ipsum duo</a></h4>
-                                            <ul class="cloth-rating">
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
-                                            </ul>
-                                            <span>$90.00<del>$55.00</del></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </ng-container>
                     </div>
-                </div>
-                <div class="coustom-section">
-                    <h4>custom cms block</h4>
-                    <p><i>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy<span class="hidden-sm"> text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></i></p>
                 </div>
             </div>
         </div>
