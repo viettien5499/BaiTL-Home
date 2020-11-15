@@ -15,6 +15,7 @@ export class ListComponent extends BaseComponent implements OnInit {
   Maloai:any;
   menus:any;
   spkm:any;
+  public totalRecords: any;
 
   constructor(injector: Injector) { 
     super(injector);

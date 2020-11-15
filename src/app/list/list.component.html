@@ -26,6 +26,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9 col-sm-9 col-xs-12">
+               <!-- 
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="row">
                         <div class="list-item">
@@ -33,14 +34,14 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque non nulla nulla, nec tincidunt risus morbi ultricies est ditae odio ultrices imperdiet. Cras accumsan dorci maces consequat blandi susto dusto elementum libero non honcus purus sem sit amet enim</p>
                         </div>
                     </div>
-                </div>
+                </div> 
+                --> 
                 <div class="per-page-pdoduct">
                     <div class="row">
-                        <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="col-md-2 col-sm-12 col-xs-12">
                             <div class="list-item-product list-item-box list-item-small">
                                 <a class="product_grid"><i class="fa fa-th" aria-hidden="true"></i></a>
                                 <a class="product_list"><i class="fa fa-list-ul" aria-hidden="true"></i></a>
-                                <p>item 1 to 15 of 15 item</p>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
@@ -60,19 +61,9 @@
                                 <p>per page</p>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="shot_by list-item-product list-item-box list-item-feature">
-                                <select name="featured">
-                                    <option value="">Featured</option>
-                                    <option value="2">shot by name</option>
-                                    <option value="3">shot by size</option>
-                                    <option value="4">shot by color</option>
-                                </select>
-                                <p>shot by</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
+                <!--list ngang-->
                 <div class="best_product" id="collection_box">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">   
@@ -104,30 +95,30 @@
                                             </ul>
                                             <span style="color: #1bbc9b">{{lst.giatien}} VNĐ</span>
                                         </div>
-                                    </div>                            
+                                    </div>                        
                                 </div>
                             </ng-container> 
                             </div>
                         </div>
                     </div>
                 </div> 
-              
+                <!-- list dọc -->
                 <div class="best-product-deatil" style="display:none;" id="collection_sidebar_list">
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12 marB30">
                             <div class="row">
+                                <ng-container *ngFor="let lst of list">
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="arrival-image">
                                         <div class="arrival-image-overlay">
                                             <figure>
                                                 <span class="overlay-two"></span>
-                                                <img src="assets/images/best-product/product-1.jpg" alt="">
+                                                <img src="assets/images/{{lst.hinhanh}}" alt="">
                                                 <figcaption>
                                                     <ul class="cart-icon">
-                                                        <li><a href="#"><span class="add-to-wish">add to wishlist</span><i class="fa fa-heart" aria-hidden="true"></i></a></li>
                                                         <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                                                        <li><a href="#"><span class="add-to-wish">buy now</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                                                        <li><a href="#"><span class="add-to-wish">quick link</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                                        <li><a><span class="add-to-wish" (click)="addToCart(lst)">Thêm vào Giỏ</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                                                        <li><a routerLink="/detail/{{lst.masp}}"><span class="add-to-wish">Xem chi tiết</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
                                                     </ul>
                                                 </figcaption>
                                             </figure>
@@ -136,9 +127,8 @@
                                 </div>
                                 <div class="col-md-8 col-sm-6 col-xs12">
                                     <div class="short-description">
-                                        <h4><a href="product-detail.html">Cras in nunc non ipsum duo</a></h4>
-                                        <span class="acme">Acme</span>
-                                        <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis.Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. <span class="hidden-sm">Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis. Sample Unordered List Comodous in tempor ullamcorper miaculis Pellentesque vitae neque mollis urna mattis...</span></p>
+                                        <h4><a routerLink="/detail/{{lst.masp}}">{{lst.tensp}}</a></h4>
+                                        <p><span class="hidden-sm">{{lst.mota}}</span></p>
                                         <ul class="cloth-rating">
                                             <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                             <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -146,294 +136,11 @@
                                             <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                             <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
                                         </ul>
-                                        <p>$90.00 <del>$55.00</del></p>
-                                        <a href="product-detail.html" class="template-button">select option</a>
+                                        <span style="color: #1bbc9b">{{lst.giatien | currency:'VND':true:'1.0-2'}}</span>
+                                        <a routerLink="/detail/{{lst.masp}}" (click)="addToCart(lst)" class="template-button">Thêm vào giỏ</a>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 marB30">
-                            <div class="grid-border">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="arrival-image">
-                                            <div class="arrival-image-overlay">
-                                                <figure>
-                                                    <span class="overlay-two"></span>
-                                                    <img src="assets/images/best-product/product-2.jpg" alt="">
-                                                    <figcaption>
-                                                        <p><span class="new-sale">new</span></p>
-                                                        <ul class="cart-icon">
-                                                            <li><a href="#"><span class="add-to-wish">add to wishlist</span><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#"><span class="add-to-wish">buy now</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#"><span class="add-to-wish">quick link</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
-                                                        </ul>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-sm-6 col-xs12">
-                                        <div class="short-description">
-                                            <h4><a href="product-detail.html">Cras in nunc non ipsum duo</a></h4>
-                                            <span class="acme">Acme</span>
-                                            <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. <span class="hidden-sm">Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis. Sample Unordered List Comodous in tempor ullamcorper miaculis Pellentesque vitae neque mollis urna mattis...</span></p>
-                                            <ul class="cloth-rating">
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
-                                            </ul>
-                                            <p>$90.00 <del>$55.00</del></p>
-                                            <a href="product-detail.html" class="template-button">select option</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 marB30">
-                            <div class="grid-border">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="arrival-image">
-                                            <div class="arrival-image-overlay">
-                                                <figure>
-                                                    <span class="overlay-two"></span>
-                                                    <img src="assets/images/best-product/product-3.jpg" alt="">
-                                                    <figcaption>
-                                                        <p><span class="sale-product">sale</span></p>
-                                                        <ul class="cart-icon">
-                                                            <li><a href="#"><span class="add-to-wish">add to wishlist</span><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#"><span class="add-to-wish">buy now</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#"><span class="add-to-wish">quick link</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
-                                                        </ul>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-sm-6 col-xs12">
-                                        <div class="short-description">
-                                            <h4><a href="product-detail.html">Cras in nunc non ipsum duo</a></h4>
-                                            <span class="acme">Acme</span>
-                                            <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. <span class="hidden-sm"> Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis. Sample Unordered List Comodous in tempor ullamcorper miaculis Pellentesque vitae neque mollis urna mattis...</span></p>
-                                            <ul class="cloth-rating">
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
-                                            </ul>
-                                            <p>$90.00 <del>$55.00</del></p>
-                                            <a href="product-detail.html" class="template-button">select option</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 marB30">
-                            <div class="grid-border">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="arrival-image">
-                                            <div class="arrival-image-overlay">
-                                                <figure>
-                                                    <span class="overlay-two"></span>
-                                                    <img src="assets/images/best-product/product-4.jpg" alt="">
-                                                    <figcaption>
-                                                        <ul class="cart-icon">
-                                                            <li><a href="#"><span class="add-to-wish">add to wishlist</span><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#"><span class="add-to-wish">buy now</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#"><span class="add-to-wish">quick link</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
-                                                        </ul>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-sm-6 col-xs12">
-                                        <div class="short-description">
-                                            <h4><a href="product-detail.html">Cras in nunc non ipsum duo</a></h4>
-                                            <span class="acme">Acme</span>
-                                            <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. <span class="hidden-sm"> Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis. Sample Unordered List Comodous in tempor ullamcorper miaculis Pellentesque vitae neque mollis urna mattis...</span></p>
-                                            <ul class="cloth-rating">
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
-                                            </ul>
-                                            <p>$90.00 <del>$55.00</del></p>
-                                            <a href="product-detail.html" class="template-button">select option</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 marB30">
-                            <div class="grid-border">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="arrival-image">
-                                            <div class="arrival-image-overlay">
-                                                <figure>
-                                                    <span class="overlay-two"></span>
-                                                    <img src="assets/images/best-product/product-5.jpg" alt="">
-                                                    <figcaption>
-                                                        <p><span class="new-sale">new</span></p>
-                                                        <ul class="cart-icon">
-                                                            <li><a href="#"><span class="add-to-wish">add to wishlist</span><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#"><span class="add-to-wish">buy now</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#"><span class="add-to-wish">quick link</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
-                                                        </ul>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-sm-6 col-xs12">
-                                        <div class="short-description">
-                                            <h4><a href="product-detail.html">Cras in nunc non ipsum duo</a></h4>
-                                            <span class="acme">Acme</span>
-                                            <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. <span class="hidden-sm"> Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis. Sample Unordered List Comodous in tempor ullamcorper miaculis Pellentesque vitae neque mollis urna mattis...</span></p>
-                                            <ul class="cloth-rating">
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
-                                            </ul>
-                                            <p>$90.00 <del>$55.00</del></p>
-                                            <a href="product-detail.html" class="template-button">select option</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 marB30">
-                            <div class="grid-border">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="arrival-image">
-                                            <div class="arrival-image-overlay">
-                                                <figure>
-                                                    <span class="overlay-two"></span>
-                                                    <img src="assets/images/best-product/product-6.jpg" alt="">
-                                                    <figcaption>
-                                                        <ul class="cart-icon">
-                                                            <li><a href="#"><span class="add-to-wish">add to wishlist</span><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#"><span class="add-to-wish">buy now</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#"><span class="add-to-wish">quick link</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
-                                                        </ul>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-sm-6 col-xs12">
-                                        <div class="short-description">
-                                            <h4><a href="product-detail.html">Cras in nunc non ipsum duo</a></h4>
-                                            <span class="acme">Acme</span>
-                                            <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. <span class="hidden-sm"> Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis. Sample Unordered List Comodous in tempor ullamcorper miaculis Pellentesque vitae neque mollis urna mattis...</span></p>
-                                            <ul class="cloth-rating">
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
-                                            </ul>
-                                            <p>$90.00 <del>$55.00</del></p>
-                                            <a href="product-detail.html" class="template-button">select option</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 marB30">
-                            <div class="grid-border">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="arrival-image">
-                                            <div class="arrival-image-overlay">
-                                                <figure>
-                                                    <span class="overlay-two"></span>
-                                                    <img src="assets/images/best-product/product-7.jpg" alt="">
-                                                    <figcaption>
-                                                        <ul class="cart-icon">
-                                                            <li><a href="#"><span class="add-to-wish">add to wishlist</span><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#"><span class="add-to-wish">buy now</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#"><span class="add-to-wish">quick link</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
-                                                        </ul>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-sm-6 col-xs12">
-                                        <div class="short-description">
-                                            <h4><a href="product-detail.html">Cras in nunc non ipsum duo</a></h4>
-                                            <span class="acme">Acme</span>
-                                            <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. <span class="hidden-sm">Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis. Sample Unordered List Comodous in tempor ullamcorper miaculis Pellentesque vitae neque mollis urna mattis...</span></p>
-                                            <ul class="cloth-rating">
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
-                                            </ul>
-                                            <p>$90.00 <del>$55.00</del></p>
-                                            <a href="product-detail.html" class="template-button">select option</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="grid-border">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="arrival-image">
-                                            <div class="arrival-image-overlay">
-                                                <figure>
-                                                    <span class="overlay-two"></span>
-                                                    <img src="assets/images/best-product/product-8.jpg" alt="">
-                                                    <figcaption>
-                                                        <p><span class="sale-product">sale</span></p>
-                                                        <ul class="cart-icon">
-                                                            <li><a href="#"><span class="add-to-wish">add to wishlist</span><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#"><span class="add-to-wish">buy now</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
-                                                            <li><a href="#"><span class="add-to-wish">quick link</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
-                                                        </ul>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 col-sm-6 col-xs12">
-                                        <div class="short-description">
-                                            <h4><a href="product-detail.html">Cras in nunc non ipsum duo</a></h4>
-                                            <span class="acme">Acme</span>
-                                            <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus. <span class="hidden-sm">Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras loremos.Donec pretium egestas sapien et mollis. Sample Unordered List Comodous in tempor ullamcorper miaculis Pellentesque vitae neque mollis urna mattis...</span></p>
-                                            <ul class="cloth-rating">
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                                <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
-                                            </ul>
-                                            <p>$90.00 <del>$55.00</del></p>
-                                            <a href="product-detail.html" class="template-button">select option</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                </ng-container>
                             </div>
                         </div>
                     </div>

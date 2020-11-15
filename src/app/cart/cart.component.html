@@ -81,7 +81,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-2 col-sm-2 col-xs-12">
-                                                        <p class="product-color">{{cart.giatien}}</p>
+                                                        <p class="product-color">{{cart.giatien | currency:'VND':true:'1.0-2'}}</p>
                                                     </div>
                                                     <div class="col-md-3 col-sm-3 col-xs-12">
                                                         <div class="quantity">
@@ -140,7 +140,7 @@
                                                                             <p class="total"><strong>Tổng Tiền:</strong></p>
                                                                         </div>
                                                                         <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-                                                                            <strong class="price">{{sp.giatien}}</strong>
+                                                                            <strong class="price">{{total | currency:'VND':true:'1.0-2'}}</strong>
                                                                         </div>
                                                                     </div>
                                                                 </div>

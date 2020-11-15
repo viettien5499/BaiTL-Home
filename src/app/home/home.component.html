@@ -169,7 +169,7 @@
                                                 <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                                 <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
                                             </ul>
-                                            <span style="color: #1bbc9b">{{it.giakm}} VNĐ<del>{{it.giatien}}</del></span>
+                                            <span style="color: #1bbc9b">{{it.giakm | currency:'VND':true:'1.0-2'}}<del>{{it.giatien | currency:'VND':true:'1.0-2'}}</del></span>
                                         </div>
                                     </div>
                                 </div>
@@ -248,7 +248,7 @@
                                         <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                         <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
                                     </ul>
-                                    <span style="color: #1bbc9b">{{it.giatien}} VNĐ</span>
+                                    <span style="color: #1bbc9b">{{it.giatien | currency:'VND':true:'1.0-2'}}</span>
                                 </div>
                             </div>
                         </div>
