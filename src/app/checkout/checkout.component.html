@@ -1,0 +1,232 @@
+ <!--//================Breadcrumb section start==============//-->
+ <section>
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="page-heading">
+                        <div class="page-header-heading padB10">
+                            <h3>checkout</h3>
+                        </div>
+                        <div class="breadcrum-box">
+                            <ul class="breadcrum">
+                                <li><a href="index-2.html">home</a></li>
+                                <li class="active"><a href="#">checkout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//================Breadcrumb section end==============//-->
+<!--//================checkout section start==============//-->
+<div class="checkout-section padTB60">
+    <div class="container">
+        <div class="row"> <form [formGroup]="hoadonForm" (ngSubmit)="themdonhang(hoadonForm.value)">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="customer-returing bg-color">
+                    <h5>Bạn Đã Có Tài Khoản ?<a class="showlogin"> Click Để Đăng Nhập</a></h5>
+                </div>
+                <div class="login" style="display:none;">
+                    <div class="row">
+                       
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="login-form">
+                                    <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer please proceed to & Shipping section.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="user-name">
+                                    <label class="billing-information" for="username">username or email<sup><i class="fa fa-star" aria-hidden="true"></i></sup></label>
+                                    <input type="text" name="user_name" id="username">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="user-name">
+                                    <label class="billing-information" for="passwords"> passwords <sup><i class="fa fa-star" aria-hidden="true"></i></sup></label>
+                                    <input type="text"  name="user_name" id="passwords">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="order-button">
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-4 col-xs-12">
+                                            <a href="#" class="template-button">login</a>
+                                        </div>
+                                        <div class="col-md-9 col-sm-8 col-xs-12">
+                                            <div class="log-in-remember remember_me">
+                                                <input type="checkbox" value="/1">
+                                                <label>Remember me</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <p class="lost-password"><a href="#">Lost your password ?</a></p>
+                            </div>
+                    
+                    </div>
+                </div>
+                <div class="bil-detail padT30">
+                    <h4>THÔNG TIN ĐẶT HÀNG CỦA BẠN ?</h4>
+                    <div class="bill-contact-detail">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Họ Tên <sup><i class="fa fa-star" aria-hidden="true"></i></sup></label>
+                                <input required formControlName="hoten" type="text" placeholder="Nhập họ tên" class="marB20">
+                            </div>
+                            <div class="col-md-12">
+                                <label>Giới tính <sup><i class="fa fa-star" aria-hidden="true"></i></sup></label>
+                                <select formControlName="gioitinh" class="marB20">        
+                                    <option value="Nam">Nam</option>
+                                    <option value="Nữ">Nữ</option>
+                                    <option value="Khác">Khác</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <label>Email <sup><i class="fa fa-star" aria-hidden="true"></i></sup></label>
+                                <input required formControlName="email" type="email" placeholder="Nhập email" class="marB20">
+                            </div>
+                            <div class="col-md-12">
+                                <label>Số điện thoại <sup><i class="fa fa-star" aria-hidden="true"></i></sup></label>
+                                <input required formControlName="sdt" type="number" placeholder="Nhập số điện thoại" class="marB20">
+                            </div>
+                            <div class="col-md-12">
+                                <label>Địa chỉ <sup><i class="fa fa-star" aria-hidden="true"></i></sup></label>
+                                <input required formControlName="diachi" type="text" placeholder="Nhập địa chỉ" class="marB20">
+                            </div>
+                            <div class="col-md-12">
+                                <label>Hình thức thanh toán <sup><i class="fa fa-star" aria-hidden="true"></i></sup></label>
+                                <select formControlName="thanhtoan" class="marB20">        
+                                    <option value="Thanh toán khi giao hàng">Thanh toán khi giao hàng</option>
+                                    <option value="Thanh toán bằng thẻ ATM">Thanh toán bằng thẻ ATM (STK SHOP: 030088886666-Vietcombank)</option>
+                                </select>
+                            </div>   
+                            <div class="col-md-12">  
+                            <div class="shipping-address padT30">
+                                <label>Ghi chú <sup><i class="fa fa-star" aria-hidden="true"></i></sup></label>
+                                <textarea formControlName="ghichu" placeholder="Nhập thông tin yêu cầu nếu bạn muốn ?"></textarea>
+                            </div>       
+                            </div>       
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="create-an-account">
+                        <input type="checkbox" name="billing-account" id="account">
+                        <label for="account">Tạo tài khoản ?</label>
+                    </div>
+                </div>
+                <div class="account-box" style="display:none;">
+                    <div class="col-md-12">
+                        <div class="create-account-box  padT10">
+                            <p>Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>
+                            <label class="billing-information" for="account-password">account password</label>
+                            <input type="password" name="billing_postcode" id="account-password" placeholder="Password">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="checkout-order-section bg-color text-center checkout-order-section-res">
+                    <h4>ĐƠN HÀNG CỦA BẠN</h4>
+                    <div class="col-md-12 col-sm-12 col-xs-12 marT30">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+                                <h5><strong>SẢN PHẨM</strong></h5>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                                <h5><strong>GIÁ TIỀN</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                    <ng-container *ngFor="let it of thanhtoan">
+                        <div class="order-detail-box">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                    <div class="row">
+                                        <div class="col-md-9 col-sm-12 col-xs-12 text-left">
+                                            <p>{{it.tensp}}</p><img style="width: 75px;" src="assets/images/{{it.hinhanh}}"alt="">
+                                        </div>
+                                        <div class="col-md-3 col-sm-12 col-xs-12 text-left">
+                                            <p><span>x</span> {{it.quantity}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                                    <p>{{it.giatien | currency:'VND':true:'1.0-2'}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                    <ng-container *ngFor="let it of thanhtoan">
+                        <div class="order-detail-box checkout-order-total">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-8 col-xs-8 text-left">
+                                    <p><strong>Tổng số lượng</strong></p>
+                                </div>
+                                <div class="col-md-6 col-sm-4 col-xs-4 text-right">
+                                    <p>{{it.quantity}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="order-detail-box checkout-order-total">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-5 text-left">
+                                    <p><strong>Phí Vận Chuyển</strong></p>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-7 text-right">
+                                    <p>Miễn phí</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="checkout-order-total padT20">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-8 col-xs-8 text-left">
+                                    <p><strong>Tổng tiền đơn hàng</strong></p>
+                                </div>
+                                <div class="col-md-6 col-sm-4 col-xs-4 text-right">
+                                    <p class="product-color"><strong>{{tongtientt | currency:'VND':true:'1.0-2'}}</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="payment-check checkout-proceed">
+                            <div class="remember_me">
+                                <input type="checkbox" id="readyI">
+                                <label for="readyI">Tôi Đã Đọc Và Chấp Nhận Các Điều Khoản Trên</label>
+                            </div>
+                            <button type="submit" class="template-button">Đặt Hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div> </form>
+        </div>
+    </div>
+</div>
+<!--//================checkout section end==============//-->
+<!--//================Scroll section start==============//-->
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+        <div class="scroll-top">
+            <div id="stop" class="scrollTop">
+                <span><a href="#"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//================Scroll section end==============//-->

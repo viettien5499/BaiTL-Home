@@ -1,0 +1,315 @@
+<!--//================Breadcrumb section start==============//-->
+  <section>
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="page-heading">
+                        <div class="page-header-heading padB10">
+                            <h3>product detail</h3>
+                        </div>
+                        <div class="breadcrum-box">
+                            <ul class="breadcrum">
+                                <li><a href="index-2.html">home</a></li>
+                                <li class="active"><a href="#">product detail</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//================Breadcrumb section end==============//-->
+<!--//================Product section start==============//-->
+<div class="product-page padTB60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="col-md-10 col-sm-10 col-xs-12 pull-right">
+                    <figure class="product-page-image">
+                        <img src="assets/images/{{detail.hinhanh}}" alt="">
+                    </figure>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12 pull-left">
+                    <div class="row">
+                        <div class="vertical-slider padTB80 hidden-xs">
+                            <div class="vertical_slider">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <figure>
+                                            <a href="assets/images/{{detail.masp}}" class="fancybox" data-fancybox-group="group">
+                                            <img src="assets/images/SP01.jpg" alt=""></a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="horizontal-slider-product hidden-md hidden-lg hidden-sm marT30">
+                            <div id="horizantal_slider_one" class="owl-carousel owl-theme owl-loaded owl-drag">
+                                <div class="item">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <figure>
+                                                <a href="assets/images/best-product/product-1.jpg" class="fancybox" data-fancybox-group="group">
+                                                <img src="assets/images/best-product/product-1.jpg" alt=""></a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <figure>
+                                                <a href="assets/images/best-product/product-2.jpg" class="fancybox" data-fancybox-group="group">
+                                                <img src="assets/images/best-product/product-2.jpg" alt=""></a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <figure>
+                                                <a href="assets/images/best-product/product-3.jpg" class="fancybox" data-fancybox-group="group">
+                                                <img src="assets/images/best-product/product-3.jpg" alt=""></a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <figure>
+                                                <a href="assets/images/best-product/product-4.jpg" class="fancybox" data-fancybox-group="group">
+                                                <img src="assets/images/best-product/product-4.jpg" alt=""></a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <figure>
+                                                <a href="assets/images/best-product/product-5.jpg" class="fancybox" data-fancybox-group="group">
+                                                <img src="assets/images/best-product/product-5.jpg" alt=""></a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="product-page-heading">
+                    <h4>{{detail.tensp}}</h4>
+                    <h3>{{detail.giatien | currency:'VND':true:'1.0-2'}}</h3>
+                    <p class="marT10">{{detail.mota}}</p>
+                    <h5>Màu sắc: {{detail.mausac}}</h5>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="row">
+                        <ul class="product-color">
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="select-size">
+                            <select>
+                                <option value="0">Size: {{detail.size}}, Chất Liệu: {{detail.chatlieu}}</option>
+                                <option>L</option>
+                                <option>M</option>
+                                <option>XL</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="incress-button">
+                            <ul>
+                                <li><button class="minus"><i class="fa fa-minus" aria-hidden="true"></i></button></li>
+                                <li><input type="text" value="01" class="qty"></li>
+                                <li><button class="add"><i class="fa fa-plus" aria-hidden="true"></i></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="add-to-cart">
+                            <a (click)="addToCart(detail)" class="template-button"><i class="fa fa-shopping-bag marR10" aria-hidden="true"></i>Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="product-ability">
+                            <p><strong>Mã sản phẩm</strong> : <span>0{{detail.masp}}</span></p>
+                            <p><strong>Xuất xứ</strong> : <span>Italia</span></p>
+                        </div>
+                    </div>
+                </div>
+             <!--   <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <ul class="product-social-icon">
+                            <li><a href="https://www.facebook.com/badhabitsstore"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+<!--//================Product section end==============//-->
+<!--//================Product discription start==============//-->
+<div class="product-discription">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div id="exTab2">
+                    <ul class="nav nav-tabs product-description-one">
+                        <li class="active"><a  href="#1" data-toggle="tab">Mô tả</a></li>
+                        <li><a href="#4" data-toggle="tab">Bình luận</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active pad20" id="1">
+                            <p>{{detail.mota}}</p>
+                        </div>
+                        <div class="tab-pane pad20" id="4">
+                            <div class="row">
+                                <div class="review-box">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="comment-box clearfix marB30">
+                                            <div class="review-box-image">
+                                                <figure class="review_image">
+                                                    <img src="assets/images/best-product/review-3.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="review-pragraph">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="all-heading  review-pra-content">
+                                                            <h4>hasib sharif <span>9 nov 2017</span></h4>
+                                                            <div class="hidden-sm hidden-xs">
+                                                                <p>Lorem Ipsum is simply dummy text of the printing and etting industry orem Ipsum has been the industry's standard my text ever since they 1500s. the printing and etting industry orem Ipsum has been the industry's standard my text ever since they 1500s. It has survived not only five centuries, </p>
+                                                            </div>
+                                                            <div class="hidden-lg hidden-md">
+                                                                <p>Lorem Ipsum is simply dummy text of the printing and etting industry</p>
+                                                            </div>
+                                                            <p><a href="#">reply....</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment-box clearfix marB30">
+                                            <div class="review-box-image">
+                                                <figure class="review_image">
+                                                    <img src="assets/images/best-product/review-4.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="review-pragraph">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <div class="all-heading  review-pra-content">
+                                                            <h4>hasib sharif <span>9 nov 2017</span></h4>
+                                                            <div class="hidden-sm hidden-xs">
+                                                                <p>Lorem Ipsum is simply dummy text of the printing and etting industry orem Ipsum has been the industry's standard my text ever since they 1500s. the printing and etting industry orem Ipsum has been the industry's standard my text ever since they 1500s. It has survived not only five centuries, </p>
+                                                            </div>
+                                                            <div class="hidden-lg hidden-md">
+                                                                <p>Lorem Ipsum is simply dummy text of the printing and etting industry</p>
+                                                            </div>
+                                                            <p><a href="#">reply....</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//================Product discription end==============//-->
+<!--//================Related product start==============//-->
+<div class="new-arrival-section padTB60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="journey-heading">
+                    <h4><span>Sản phẩm liên quan</span></h4>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="slider-two">
+                        <div id="new_arrival" class="owl-carousel owl-theme">
+                            <ng-container *ngFor="let sp of splq">
+                            <div class="item">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="arrival-image">
+                                        <div class="arrival-image-overlay">
+                                            <figure>
+                                                <span class="overlay-two"></span>
+                                                <img src="assets/images/{{sp.hinhanh}}" alt="">
+                                                <figcaption>
+                                                    <p><span class="new-sale">cùng loại</span></p>
+                                                    <ul class="cart-icon">
+                                                        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                                        <li><a><span class="add-to-wish" (click)="addToCart(sp)">Thêm vào Giỏ</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                                                        <li><a routerLink="/detail/{{sp.masp}}"><span class="add-to-wish">Xem chi tiết</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="arrival-image-content">
+                                            <h4><a routerLink="detail/:id">{{sp.tensp}}</a></h4>
+                                            <ul class="cloth-rating">
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                                            </ul>
+                                            <span style="color: #1bbc9b">{{sp.giatien | currency:'VND':true:'1.0-2'}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//================Related product end==============//-->
+<!--//================Scroll section start==============//-->
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+        <div class="scroll-top">
+            <div id="stop" class="scrollTop">
+                <span><a href="#"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//================Scroll section end==============//-->

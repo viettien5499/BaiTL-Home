@@ -1,0 +1,247 @@
+   <!--//================Breadcrumb section start==============//-->
+   <section>
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="page-heading">
+                        <div class="page-header-heading padB10">
+                            <h3>our collection</h3>
+                        </div>
+                        <div class="breadcrum-box">
+                            <ul class="breadcrum">
+                                <li><a routerLink="/">Trang chủ</a></li>
+                                <li class="active"><a routerLink="/list">Danh mục</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//================Breadcrumb section end==============//-->
+<!--//================Collection Product section start==============//-->
+<div class="product-collection-section padTB60">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-9 col-xs-12">
+               <!-- 
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="list-item">
+                            <h4>men</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque non nulla nulla, nec tincidunt risus morbi ultricies est ditae odio ultrices imperdiet. Cras accumsan dorci maces consequat blandi susto dusto elementum libero non honcus purus sem sit amet enim</p>
+                        </div>
+                    </div>
+                </div> 
+                --> 
+                <div class="per-page-pdoduct">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-12 col-xs-12">
+                            <div class="list-item-product list-item-box list-item-small">
+                                <a class="product_grid"><i class="fa fa-th" aria-hidden="true"></i></a>
+                                <a class="product_list"><i class="fa fa-list-ul" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="list-product list-item-product list-item-box list-item-select">
+                                <p>show</p>
+                                <select name="number-of-page">
+                                    <option value="">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                                <p>per page</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--list ngang-->
+                <div class="best_product" id="collection_box">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">   
+                            <div class="row">  
+                            <ng-container *ngFor="let lst of list">      
+                                <div class="col-md-4 col-sm-6 col-xs-12 marB30">
+                                    <div class="arrival-image">
+                                        <div class="arrival-image-overlay">
+                                            <figure>
+                                                <span class="overlay-two"></span>
+                                                <img src="assets/images/{{lst.hinhanh}}" alt="">
+                                                <figcaption>
+                                                    <ul class="cart-icon">
+                                                        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                                        <li><a><span class="add-to-wish" (click)="addToCart(lst)">Thêm vào Giỏ</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                                                        <li><a routerLink="/detail/{{lst.masp}}"><span class="add-to-wish">Xem chi tiết</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="arrival-image-content">
+                                            <h4><a routerLink="/detail/{{lst.masp}}">{{lst.tensp}}</a></h4>
+                                            <ul class="cloth-rating">
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                                            </ul>
+                                            <span style="color: #1bbc9b">{{lst.giatien | currency:'VND':true:'1.0-2'}} VNĐ</span>
+                                        </div>
+                                    </div>                        
+                                </div>
+                            </ng-container> 
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!-- list dọc -->
+                <div class="best-product-deatil" style="display:none;" id="collection_sidebar_list">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 marB30">
+                            <div class="row">
+                                <ng-container *ngFor="let lst of list">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="arrival-image">
+                                        <div class="arrival-image-overlay">
+                                            <figure>
+                                                <span class="overlay-two"></span>
+                                                <img src="assets/images/{{lst.hinhanh}}" alt="">
+                                                <figcaption>
+                                                    <ul class="cart-icon">
+                                                        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                                        <li><a><span class="add-to-wish" (click)="addToCart(lst)">Thêm vào Giỏ</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                                                        <li><a routerLink="/detail/{{lst.masp}}"><span class="add-to-wish">Xem chi tiết</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-sm-6 col-xs12">
+                                    <div class="short-description">
+                                        <h4><a routerLink="/detail/{{lst.masp}}">{{lst.tensp}}</a></h4>
+                                        <p><span class="hidden-sm">{{lst.mota}}</span></p>
+                                        <ul class="cloth-rating">
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                            <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                                        </ul>
+                                        <span style="color: #1bbc9b">{{lst.giatien | currency:'VND':true:'1.0-2'}}</span>
+                                        <a routerLink="/detail/{{lst.masp}}" (click)="addToCart(lst)" class="template-button">Thêm vào giỏ</a>
+                                    </div>
+                                </div>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="categories-section">
+                    <h4>Danh Mục</h4>
+                    <ng-container *ngFor="let lst2 of menus">
+                    <ul class="widget-content">
+                        <li><a routerLink="/list/{{lst2.maloai}}">{{lst2.tenloai}}</a></li>
+                    </ul>
+                    </ng-container>
+                </div>
+               <div class="color-section">
+                    <h4 class="oncolor">color</h4>
+                    <ul class="color-list">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="size-section">
+                    <h4 class="onsize">size</h4>
+                    <ul class="size-list">
+                        <li><input type="checkbox" id="xs"><label for="xs">xs</label></li>
+                        <li><input type="checkbox" id="s"><label for="s">s</label></li>
+                        <li><input type="checkbox" id="m"><label for="m">m</label></li>
+                        <li><input type="checkbox" id="l"><label for="l">l</label></li>
+                        <li><input type="checkbox" id="xl"><label for="xl">xl</label></li>
+                    </ul>
+                </div>
+                <div class="price-section">
+                    <h4 class="onprice">price</h4>
+                    <ul class="price-list">
+                        <li><input type="checkbox" id="under"><label for="under">under $100</label></li>
+                        <li><input type="checkbox" id="mid"><label for="mid">$100-$200</label></li>
+                        <li><input type="checkbox" id="above"><label for="above">above $200</label></li>
+                    </ul>
+                </div>
+                <div class="brand-section">
+                    <h4 class="onbrand">brand</h4>
+                    <ul class="brand-list">
+                        <li><input type="checkbox" id="chanel"><label for="chanel">chanel</label></li>
+                        <li><input type="checkbox" id="dior"><label for="dior">dior</label></li>
+                        <li><input type="checkbox" id="gap"><label for="gap">gap</label></li>
+                        <li><input type="checkbox" id="lucci"><label for="lucci">lucci</label></li>
+                        <li><input type="checkbox" id="louis"><label for="louis">louis</label></li>
+                    </ul>
+                </div> 
+                <div class="featured-product">
+                    <h5>Bạn có quan tâm sản phẩm này?</h5>
+                    <div id="sidebar_collection" class="owl-carousel owl-theme">
+                        <ng-container *ngFor="let sp of spkm">
+                        <div class="item">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="arrival-image">
+                                        <div class="arrival-image-overlay">
+                                            <figure>
+                                                <span class="overlay-two"></span>
+                                                <img src="assets/images/{{sp.hinhanh}}" alt="">
+                                                <figcaption>
+                                                    <p><span class="new-sale">Sale</span></p>
+                                                    <ul class="cart-icon">
+                                                        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="add-to-wish">quick view</span><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                                        <li><a><span class="add-to-wish" (click)="addToCart(sp)">Thêm vào Giỏ</span><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                                                        <li><a routerLink="/detail/{{sp.masp}}"><span class="add-to-wish">Xem chi tiết</span><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="arrival-image-content">
+                                            <h4><a routerLink="/detail/{{sp.masp}}">{{sp.tensp}}</a></h4>
+                                            <ul class="cloth-rating">
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                                <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                                            </ul>
+                                            <span style="color: #1bbc9b">{{sp.giakm | currency:'VND':true:'1.0-2'}} VNĐ<del>{{sp.giatien | currency:'VND':true:'1.0-2'}}</del></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//================Scroll section start==============//-->
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+        <div class="scroll-top">
+            <div id="stop" class="scrollTop">
+                <span><a href="#"><i class="fa fa-angle-double-up" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//================Scroll section end==============//-->
